@@ -1,0 +1,13 @@
+*.dta
+*.csv
+*.parquet
+*.duckdb
+*.rar
+*.zip
+*.7z
+data/raw/
+.venv/
+__pycache__/
+.ipynb_checkpoints/
+.Rproj.user/
+~$*

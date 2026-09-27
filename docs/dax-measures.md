@@ -34,16 +34,6 @@ Gross Order Value (M) =
 DIVIDE([Gross Order Value], 1000000)
 ```
 
-### Monthly Growth Rate
-
-```dax
-Monthly Growth Rate =
-DIVIDE(
-    [Gross Order Value] - [Previous Month Gross Order Value],
-    [Previous Month Gross Order Value]
-)
-```
-
 ### Payment Difference
 
 ```dax
@@ -63,16 +53,6 @@ DIVIDE ( [Payment Value] - [Gross Order Value], [Gross Order Value] )
 ```dax
 Payment Value =
 sum(Payments[payment_value])
-```
-
-### Previous Month Gross Order Value
-
-```dax
-Previous Month Gross Order Value =
-CALCULATE(
-    [Gross Order Value],
-    DATEADD('Calendar'[Date], -1, MONTH)
-)
 ```
 
 ### Product Revenue
@@ -419,13 +399,6 @@ Weighted Review Check Delivered =
 
 ## 07 Core Counts
 
-### Order Count (Thousands)
-
-```dax
-Order Count (Thousands) =
-DIVIDE([Total Orders], 1000)
-```
-
 ### Order Share %
 
 ```dax
@@ -437,13 +410,6 @@ DIVIDE(
         ALL(Orders[Delivery Status])
     )
 )
-```
-
-### Test Orders
-
-```dax
-Test Orders =
-COUNTROWS('Orders')
 ```
 
 ### Total Orders
@@ -459,7 +425,6 @@ DISTINCTCOUNT(Orders[order_id])
 Total Orders (Thousands) =
 divide([Total Orders],1000)
 ```
-
 ## Calculated columns · Columnas calculadas
 
 ```dax

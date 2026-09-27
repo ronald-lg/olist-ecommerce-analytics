@@ -75,7 +75,7 @@ erDiagram
 
 **Decisiones de modelado**
 
-- **Tabla de medidas aparte.** Las 44 medidas viven en `_Measures`, ordenadas en carpetas (Sales, Time, Customers, Delivery, Reviews, Validation, Core Counts). Ninguna queda repartida entre las tablas de datos.
+- **Tabla de medidas aparte.** Las 40 medidas viven en `_Measures`, ordenadas en carpetas (Sales, Time, Customers, Delivery, Reviews, Validation, Core Counts). Ninguna queda repartida entre las tablas de datos.
 - **Columnas calculadas solo donde hace falta una etiqueta por fila.** `Orders[Delivery Status]` (On time / Late / Not delivered) y `Orders[Order Purchase Date]` (la clave de fecha para la relación con `Calendar`).
 - **Filtro bidireccional solo dentro de una medida.** `Active Consumers` usa `CROSSFILTER(..., BOTH)` dentro de su fórmula, en vez de una relación bidireccional en todo el modelo. Así los filtros no se propagan en direcciones ambiguas.
 - **Power Query:** los tipos de datos se fijan con la configuración regional de cada fuente (`en-US` en columnas de moneda, lo que evita errores de separador decimal en un equipo configurado en español), y la columna de nota se renombra para que se lea mejor.

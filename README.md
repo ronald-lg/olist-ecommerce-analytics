@@ -73,7 +73,7 @@ erDiagram
 
 **Modeling choices**
 
-- **Separate measures table.** All 44 measures live in `_Measures`, grouped into display folders (Sales, Time, Customers, Delivery, Reviews, Validation, Core Counts). None are left scattered across the data tables.
+- **Separate measures table.** All 40 measures live in `_Measures`, grouped into display folders (Sales, Time, Customers, Delivery, Reviews, Validation, Core Counts). None are left scattered across the data tables.
 - **Calculated columns only where a row-level label is needed.** `Orders[Delivery Status]` (On time / Late / Not delivered) and `Orders[Order Purchase Date]` (the date key for the `Calendar` relationship).
 - **Bidirectional filtering only inside one measure.** `Active Consumers` uses `CROSSFILTER(..., BOTH)` inside its formula instead of a model-wide bidirectional relationship, so filters can't spread in ambiguous directions.
 - **Power Query:** data types are set per locale (`en-US` for currency columns, which avoids decimal-separator errors on a Spanish-locale machine), and the review score column is renamed for readability.

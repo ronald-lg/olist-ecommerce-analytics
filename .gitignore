@@ -11,3 +11,16 @@ __pycache__/
 .ipynb_checkpoints/
 .Rproj.user/
 ~$*
+
+# Power BI (PBIP local cache and settings, if the project is ever saved as .pbip)
+**/.pbi/localSettings.json
+**/.pbi/cache.abf
+
+# Local helper utilities (they live in the toolbox repo)
+generar_reporte_carpetas.py
+reporte_estructura.txt
+
+# OS files
+Thumbs.db
+Desktop.ini
+.DS_Store
